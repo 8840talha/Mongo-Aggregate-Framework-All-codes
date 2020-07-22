@@ -1,5 +1,17 @@
 # Mongo-Aggregate-Framework-All-codes
 ## Aggregation framework is the most powerfull tool that mongodb offers to reduce execution time and execute queries faster.
+# Match
+#### Example-1
+	db.getCollection('persons').aggregate([
+	{$match:{age:{$gte:25}}}
+	])
+
+#### Example-2
+	db.getCollection('persons').aggregate([
+	{$match:{age:{$gte:25},gender:"female"}}
+	])
+#######  Outputs all enteries with age greater than 25 and gender female.	
+	
 # Count
 #### # Example-1:
 ###### To Count All Docs.
