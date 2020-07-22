@@ -201,9 +201,8 @@
 ###### Used to write documents of one collection to another
 ###### Example->
 	*db.getCollection('persons').aggregate([
-
-{$group:{_id:{age:"$age"}}},
-{$out:"newCollection"}
+	{$group:{_id:{age:"$age"}}},
+	{$out:"newCollection"}
 
 ])*
 ###### Groups All age Categories from one collection and writes to another collection names newCollection.
