@@ -206,8 +206,10 @@
 
 ])*
 ###### Groups All age Categories from one collection and writes to another collection names newCollection.
+#
 
 # $elemmatch
+###### Matches And returns elements from the array that match a certain field in an array or Array of objects.
 	{ _id: 1, results: [ { product: "abc", score: 10 }, { product: "xyz", score: 5 } ] }
 	{ _id: 2, results: [ { product: "abc", score: 8 }, { product: "xyz", score: 7 } ] }
 	
