@@ -7,10 +7,10 @@
 ])*
 #### # Example-2:
 ###### #### To match docs based on age and return there count
-*db.getCollection('persons').aggregate([
-  {$match:{age:{$gte:25}}},
-  {$count:"AgeCount"} 
-])*
+	*db.getCollection('persons').aggregate([
+  	{$match:{age:{$gte:25}}},
+  	{$count:"AgeCount"} 
+	])*
 # 
 # Sort
 #### # Example-1:
