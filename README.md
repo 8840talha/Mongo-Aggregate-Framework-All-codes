@@ -137,7 +137,7 @@
 	}}
 	])*
 ###### Output It will return the count of occureneces of every element of the tags array from the entire collection
-
+# $avg
 #### $avg Here we will count avg of certain fields.
 ###### Example 1
 	db.getCollection('persons').aggregate([
