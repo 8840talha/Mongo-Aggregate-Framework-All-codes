@@ -11,7 +11,17 @@
 	{$match:{age:{$gte:25},gender:"female"}}
 	])
 ####  Outputs all enteries with age greater than 25 and gender female.	
+# 
+# Group
+#### Groups documents on certain field names.
+#### Example-1
+	db.getCollection('persons').aggregate([
+	{$group:{_id:{age:"$age",gender:"female"}}}
+	])
 	
+####  Outputs all enteries by grouping on age field and gender field.	
+
+#
 # Count
 #### # Example-1:
 ###### To Count All Docs.
