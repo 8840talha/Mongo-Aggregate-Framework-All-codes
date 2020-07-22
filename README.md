@@ -1,4 +1,5 @@
 # Mongo-Aggregate-Framework-All-codes
+## Aggregation framework is the most powerfull tool that mongodb offers to reduce execution time and execute queries faster.
 # Count
 #### # Example-1:
 ###### To Count All Docs.
@@ -172,3 +173,15 @@
 		"arrayType":"array",
 		"objectType":"object"
 	}*
+
+#
+# $out Operator.
+###### Used to write documents of one collection to another
+###### Example->
+	*db.getCollection('persons').aggregate([
+
+{$group:{_id:{age:"$age"}}},
+{$out:"newCollection"}
+
+])*
+###### Groups All age Categories from one collection and writes to another collection names newCollection.
