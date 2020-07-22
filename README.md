@@ -148,3 +148,27 @@ avgAge:{$avg:"$age"
 }
 ])
 ###### It will return the average age of persons with same location .
+#
+# Unary Operators
+#### $type 
+###### Let array=[1,2,3,4],object ={{"x":"y"}}
+###### Explanation->Takes in the actual document and returns the type of it.
+*
+db.getCollection('persons').aggregate([
+{$project:{
+    name:1,
+    ageType:{$type:"$age"},
+	arrayType:{$type:"$array"},
+	objectType:{$type:"$object"}
+    }}
+	
+ ])
+*
+##### Output
+*{
+    "_id" : ObjectId("5f167bdb84e443c125dfee18"),
+    "name" : "Something",
+    "ageType" : "int",
+	"arrayType":"array",
+	"objectType":"object"
+}*
