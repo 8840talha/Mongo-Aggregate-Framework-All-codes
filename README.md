@@ -207,6 +207,18 @@
 ])*
 ###### Groups All age Categories from one collection and writes to another collection names newCollection.
 
+# $elemmatch
+	{ _id: 1, results: [ { product: "abc", score: 10 }, { product: "xyz", score: 5 } ] }
+	{ _id: 2, results: [ { product: "abc", score: 8 }, { product: "xyz", score: 7 } ] }
+	
+#### { <field>: { $elemMatch: { <query1>, <query2>, ... } } }
+####  Example 	
+	db.products.find(
+	   { results: { $elemMatch: { product: "xyz", score: { $gte: 8 } } } }
+	)	
+	
+#
+
 # INDEXING
 
 # createIndex()
