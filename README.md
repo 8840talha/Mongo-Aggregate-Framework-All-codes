@@ -10,7 +10,7 @@
 	db.getCollection('persons').aggregate([
 	{$match:{age:{$gte:25},gender:"female"}}
 	])
-#######  Outputs all enteries with age greater than 25 and gender female.	
+####  Outputs all enteries with age greater than 25 and gender female.	
 	
 # Count
 #### # Example-1:
